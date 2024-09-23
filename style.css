@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --light-purple: #6D44E4;
+    --blue: #44A1E4;
+    --light-blue: #44D7E4;
+    --light-green: #44E4BC;
+    --yellow: #BCE444;
+    --orange: #E4D744;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F7F7F7;
+    color: #1A1A1A;
+}
+
+#heart {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+}
+
+.colorPicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.colors {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.color:hover {
+    border: 1px solid white;
+}
+
+.color:active {
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.purple {
+    background-color: var(--light-purple);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.lightblue {
+    background-color: var(--light-blue);
+}
+
+.green {
+    background-color: var(--light-green);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.orange {
+    background-color: var(--orange);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
