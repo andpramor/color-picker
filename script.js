@@ -2,6 +2,7 @@ const heart = document.getElementById('heart')
 
 const handleColorSelection = (e) => {
     const selectedColor = getComputedStyle(e.target).backgroundColor
+    heart.style.animation = 'none'
     heart.style.fill = selectedColor
 }
 
