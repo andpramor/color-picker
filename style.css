@@ -28,18 +28,17 @@ body {
 #heart {
   width: 200px;
   height: 200px;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   animation: heartIn 1s ease 0s 1 normal forwards;
   overflow: visible;
 }
 
 @keyframes heartIn {
   0% {
-    transform: scale(1.5);
+    filter: drop-shadow(0 0 0 0);
   }
 
   100% {
-    transform: scale(1);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   }
 }
 
