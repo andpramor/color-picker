@@ -29,7 +29,7 @@ body {
   width: 200px;
   height: 200px;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
-  animation: heartIn 2s ease 0s 1 normal forwards;
+  animation: heartIn 3s ease 0s 1 normal forwards;
   overflow: visible;
 }
 
@@ -37,11 +37,11 @@ body {
   0% {
     fill: var(--light-purple);
   }
-  33.33% {
-    fill: var(--light-blue);
+  40% {
+    fill: var(--yellow);
   }
-  66.67% {
-    fill: var(--orange);
+  60% {
+    fill: var(--light-blue);
   }
   100% {
     fill: var(--light-purple);
