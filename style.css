@@ -1,89 +1,90 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --light-purple: #6D44E4;
-    --blue: #44A1E4;
-    --light-blue: #44D7E4;
-    --light-green: #44E4BC;
-    --yellow: #BCE444;
-    --orange: #E4D744;
+  --light-purple: #6d44e4;
+  --blue: #44a1e4;
+  --light-blue: #44d7e4;
+  --light-green: #44e4bc;
+  --yellow: #bce444;
+  --orange: #e4d744;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
-    padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F7F7F7;
-    color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #1a1a1a;
 }
 
 #heart {
-    width: 200px;
-    height: 200px;
-    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
 }
 
 .colorPicker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .colors {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.2);
 }
 
 .color {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .color:hover {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .color:active {
-    border-top: 3px solid white;
-    border-left: 3px solid white;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
 }
 
 .purple {
-    background-color: var(--light-purple);
-    border-radius: 0.5rem 0 0 0.5rem;
+  background-color: var(--light-purple);
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 
 .blue {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .lightblue {
-    background-color: var(--light-blue);
+  background-color: var(--light-blue);
 }
 
 .green {
-    background-color: var(--light-green);
+  background-color: var(--light-green);
 }
 
 .yellow {
-    background-color: var(--yellow);
+  background-color: var(--yellow);
 }
 
 .orange {
-    background-color: var(--orange);
-    border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--orange);
+  border-radius: 0 0.5rem 0.5rem 0;
 }
