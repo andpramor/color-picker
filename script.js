@@ -1,4 +1,4 @@
-const heart = document.getElementById('heart')
+const colorSvg = document.getElementById('colorSvg')
 const showSelectedColor = document.querySelector('.colorShow .selectedColor')
 const copyHexArea = document.querySelector('.colorShow path')
 let selectionWasMade = false
@@ -24,12 +24,12 @@ const handleColorSelection = (e) => {
     const selectedColor = getComputedStyle(e.target).backgroundColor
     selectedHex = rgbToHex(selectedColor).toUpperCase()
     if (!selectionWasMade) {
-        heart.style.animation = 'none'
+        colorSvg.style.animation = 'none'
         copyHexArea.style.cursor = 'pointer'
         copyHexArea.addEventListener('click', copySelectedColor)
         selectionWasMade = true
     }
-    heart.style.fill = selectedColor
+    colorSvg.style.fill = selectedColor
     showSelectedColor.textContent = selectedHex
 }
 
