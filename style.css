@@ -2,15 +2,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --light-purple: #6d44e4;
-  --blue: #44a1e4;
-  --light-blue: #44d7e4;
-  --light-green: #44e4bc;
-  --yellow: #bce444;
-  --orange: #e4d744;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -18,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  padding: 0;
+  padding: 2rem;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f7f7;
@@ -45,7 +36,7 @@ body {
 }
 .colorShow:has(path:hover) .selectedColor,
 .selectedColor:hover {
-    display: block;
+  display: block;
 }
 
 #colorSvg {
@@ -58,13 +49,13 @@ body {
 
 @keyframes heartIn {
   0% {
-    fill: var(--light-purple);
+    fill: #6d44e4;
   }
   40% {
-    fill: var(--yellow);
+    fill: #bce444;
   }
   60% {
-    fill: var(--light-blue);
+    fill: #44d7e4;
   }
   100% {
     fill: white;
@@ -76,7 +67,33 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  font-weight: 600;
   animation: colorPickerIn 1.5s ease 0s 1 normal forwards;
+}
+
+.palettes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .palettes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .palettes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.palette {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 @keyframes colorPickerIn {
@@ -124,9 +141,10 @@ body {
 }
 
 .colors {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 0;
+  width: 300px;
   border-radius: 0.5rem;
   overflow: hidden;
   -webkit-box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.6);
@@ -134,7 +152,6 @@ body {
 }
 
 .color {
-  width: 40px;
   height: 40px;
   cursor: pointer;
 }
@@ -148,28 +165,120 @@ body {
   border-left: 3px solid white;
 }
 
-.purple {
-  background-color: var(--light-purple);
+.colors .color:first-child {
   border-radius: 0.5rem 0 0 0.5rem;
 }
-
-.blue {
-  background-color: var(--blue);
-}
-
-.lightblue {
-  background-color: var(--light-blue);
-}
-
-.green {
-  background-color: var(--light-green);
-}
-
-.yellow {
-  background-color: var(--yellow);
-}
-
-.orange {
-  background-color: var(--orange);
+.colors .color:last-child {
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#original {
+  .color:nth-child(1) {
+    background-color: #6d44e4;
+  }
+  .color:nth-child(2) {
+    background-color: #44a1e4;
+  }
+  .color:nth-child(3) {
+    background-color: #44d7e4;
+  }
+  .color:nth-child(4) {
+    background-color: #44e4bc;
+  }
+  .color:nth-child(5) {
+    background-color: #bce444;
+  }
+  .color:nth-child(6) {
+    background-color: #e4d744;
+  }
+}
+
+#halloween {
+  .color:nth-child(1) {
+    background-color: #500275;
+  }
+  .color:nth-child(2) {
+    background-color: #9b20d5;
+  }
+  .color:nth-child(3) {
+    background-color: #edeade;
+  }
+  .color:nth-child(4) {
+    background-color: #ff9e45;
+  }
+  .color:nth-child(5) {
+    background-color: #ff7410;
+  }
+}
+
+#horizon {
+  .color:nth-child(1) {
+    background-color: #9e7d07;
+  }
+  .color:nth-child(2) {
+    background-color: #e78b00;
+  }
+  .color:nth-child(3) {
+    background-color: #efb8bf;
+  }
+  .color:nth-child(4) {
+    background-color: #f2f0e5;
+  }
+  .color:nth-child(5) {
+    background-color: #4f8b87;
+  }
+}
+
+#summer {
+  .color:nth-child(1) {
+    background-color: #30add4;
+  }
+  .color:nth-child(2) {
+    background-color: #ff8761;
+  }
+  .color:nth-child(3) {
+    background-color: #ffd66d;
+  }
+  .color:nth-child(4) {
+    background-color: #f2f1e3;
+  }
+  .color:nth-child(5) {
+    background-color: #dfa1e9;
+  }
+}
+
+#candy {
+  .color:nth-child(1) {
+    background-color: #9e4057;
+  }
+  .color:nth-child(2) {
+    background-color: #d2648c;
+  }
+  .color:nth-child(3) {
+    background-color: #e3a0b8;
+  }
+  .color:nth-child(4) {
+    background-color: #f7dce8;
+  }
+  .color:nth-child(5) {
+    background-color: #fbb0b9;
+  }
+}
+
+#cold {
+  .color:nth-child(1) {
+    background-color: #681270;
+  }
+  .color:nth-child(2) {
+    background-color: #2f899d;
+  }
+  .color:nth-child(3) {
+    background-color: #adc4b6;
+  }
+  .color:nth-child(4) {
+    background-color: #ecece8;
+  }
+  .color:nth-child(5) {
+    background-color: #f95875;
+  }
 }
